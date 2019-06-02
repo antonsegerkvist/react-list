@@ -1,0 +1,115 @@
+.list {
+  background-color: #fff;
+  border-radius: 5px;
+  float: left;
+  height: auto;
+  max-height: 500px;
+  min-height: 50px;
+  width: 100%;
+}
+.list > .header {
+  border-bottom: 1px solid #000;
+  box-sizing: border-box;
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  width: 100%;
+}
+.list > .header > .title {
+  font-size: 14px;
+  user-select: none;
+}
+
+.list > .body {
+  float: left;
+  min-height: 100px;
+  max-height: 400px;
+  overflow-y: auto;
+  position: relative;
+  width: 100%;
+}
+
+.list > .body > .lds-ring {
+  display: inline-block;
+  left: 50%;
+  position: absolute;
+  width: 64px;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  height: 64px;
+}
+.list > .body > .lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 51px;
+  height: 51px;
+  margin: 6px;
+  border: 6px solid #000;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #000 transparent transparent transparent;
+}
+.list > .body > .lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.list > .body > .lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.list > .body > .lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.list > .body > .error-message {
+  font-size: 14px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.list > .footer {
+  border-top: 1px solid #000;
+  box-sizing: border-box;
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  position: relative;
+  width: 100%;
+}
+.list > .footer > .adder {
+  border-bottom-left-radius: 5px;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: background-color 267ms ease-in-out;
+  width: 50%;
+}
+.list > .footer > .adder:hover {
+  background-color: rgba(0, 0, 255, 0.5);
+}
+.list > .footer > .delete {
+  border-bottom-right-radius: 5px;
+  bottom: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: background-color 267ms ease-in-out;
+  width: 50%;
+}
+.list > .footer > .delete:hover {
+  background-color: rgba(255, 0, 0, 0.5);
+}

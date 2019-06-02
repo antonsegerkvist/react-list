@@ -1,0 +1,13 @@
+.app {
+  background-color: #282c34;
+  min-height: 100vh;
+  position: relative;
+}
+.app > .list-container {
+  left: 50%;
+  max-width: 500px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}

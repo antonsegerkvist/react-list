@@ -1,8 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ListItem from './ListItem';
 import './List.css';
 
 class List extends React.Component {
+
+  static propTypes = {
+    title: PropTypes.string,
+    openModal: PropTypes.func
+  };
 
   constructor (props) {
     super(props);
@@ -22,7 +28,7 @@ class List extends React.Component {
         </div>
         { this.body }
         <div className="footer">
-          <div onClick={this.addListItem} className="adder">
+          <div onClick={this.props.openModal} className="adder">
           </div>
           <div className="delete">
           </div>
